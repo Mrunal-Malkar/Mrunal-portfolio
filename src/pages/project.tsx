@@ -1,5 +1,6 @@
 import React from "react";
 import Faq from "../components/faq";
+import PersonalCard from "../components/personalcard";
 
 const Project = () => {
   const faqs=[
@@ -8,10 +9,12 @@ const Project = () => {
     {question:"would you manage work according to US/Different time zones?",answer:"Yes, i am flexible with working hours and would be also able to work according to US time zone."},
   ]
   return (
+    <>
+  
     <div className="w-full xl:w-7/12 2xl:w-6/12 bg-red-600 p-2 flex flex-col gap-y-4 md:items-center items-start">
       <div className="w-full flex flex-col xl:justify-start gap-y-4">
         <div className="w-full flex xl:justify-start justify-center">
-          <h1 className="font-bold text-center xl:text-start text-4xl xl:text-7xl md:text-5xl max-w-3xl mx-auto">
+          <h1 className="font-bold text-center xl:text-start text-5xl xl:text-7xl md:text-6xl max-w-3xl mx-auto">
             Recent Projects and Achievements
           </h1>
         </div>
@@ -50,7 +53,7 @@ const Project = () => {
         </div>
         <div className="w-full p-2 bg-slate-400 flex flex-col xl:justify-start items-center justify-center">
         {faqs.map((val)=>{
-         return <Faq question={val.question} answer={val.answer} />
+          return <Faq question={val.question} answer={val.answer} />
         })}
         </div>
       </div>
@@ -65,6 +68,10 @@ const Project = () => {
         </div>
       </div>
     </div>
+    <span className='block xl:hidden'>
+    <PersonalCard/>
+    </span>
+    </>
   );
 };
 

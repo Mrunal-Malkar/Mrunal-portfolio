@@ -1,7 +1,13 @@
+import PersonalCard from "../components/personalcard";
+
 const Home = () => {
 
 
   return (
+    <>
+    <span className="block xl:hidden">
+    <PersonalCard/>
+    </span>
     <div className="w-full xl:w-4/12 bg-red-300 h-screen p-2">
       <div className="w-full flex flex-col gap-y-10">
         <div className="w-full flex flex-col gap-y-4">
@@ -55,6 +61,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

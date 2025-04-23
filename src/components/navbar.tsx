@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import type { NavLinkProps } from 'react-router-dom';
 
 const getNavClassName: NavLinkProps['className'] = ({ isActive }) =>
-  `w-15 sm:w-20 flex justify-center items-center rounded transition ${
+  `full sm:w-20 flex justify-center items-center rounded transition ${
     isActive ? 'bg-blue-700' : 'bg-cyan-700 hover:bg-cyan-600'
   }`;
 

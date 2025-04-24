@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PersonalCard from "../components/personalcard";
+import { toast, ToastContainer } from "react-toastify";
+import emailjs from "emailjs-com";
+import Collaborate from "../components/collaborate";
 
 const About = () => {
   const [email, setEmail] = useState("");
@@ -7,12 +10,43 @@ const About = () => {
 
   async function sendEmail() {
     if (!email || !message) {
-      return;
+      return toast.error("Please fill all the fields of the form!");
+    }
+
+    const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    const isValidGmail = gmailRegex.test(email);
+    if (!isValidGmail) {
+      return toast.error("Please enter a valid Gmail address");
+    }
+
+    try {
+      const response = await emailjs.send(
+        import.meta.env.VITE_SERVICE_ID!,
+        import.meta.env.VITE_TEMPLATE_ID!,
+        {
+          email,
+          message,
+        },
+        import.meta.env.VITE_PUBLIC_KEY!
+      );
+
+      if (response.status === 200) {
+        toast.success(
+          "Email sent successfully! Thank you for reaching out, I’ll get back to you soon!"
+        );
+        setEmail("");
+        setMessage("");
+      }
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast.error("Error sending email, please try again later.");
     }
   }
+
   return (
     <>
       <div className="bg-amber-700 w-full xl:w-7/12 p-2">
+        <ToastContainer />
         <div className="w-full flex bg-purple-400 flex-col gap-y-4">
           <div className="bg-green-200">
             <h1 className="text-5xl  xl:text-start text-center md:text-7xl font-bold">
@@ -67,6 +101,7 @@ const About = () => {
                 <input
                   onChange={(e) => setEmail(e.target.value)}
                   type="text"
+                  value={email}
                   placeholder="enter your email"
                   className="p-2 mb-2 border sm:w-[550px] w-full xl:w-full bg-red-400 border-gray-400 rounded "
                 />
@@ -75,6 +110,7 @@ const About = () => {
                 <p className="bg-amber-300 w-18">Message:</p>
                 <textarea
                   onChange={(e) => setMessage(e.target.value)}
+                  value={message}
                   placeholder="Enter your message"
                   className="p-2 mb-2 xl:w-full sm:w-[550px] w-full border border-gray-400 rounded "
                 ></textarea>
@@ -88,6 +124,7 @@ const About = () => {
             </div>
           </div>
         </div>
+      <Collaborate/>
       </div>
       <span className="block xl:hidden">
         <PersonalCard />

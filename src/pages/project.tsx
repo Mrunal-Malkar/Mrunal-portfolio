@@ -7,7 +7,7 @@ const Project = () => {
 
   return (
     <>
-      <div className="xl:w-max p-2 bg-red-600 flex flex-col gap-y-4 md:items-center items-start">
+      <div className="xl:w-min p-2 bg-red-600 flex flex-col gap-y-4 md:items-center items-start">
         <div className="w-full flex flex-col xl:justify-start gap-y-4">
           <div className="w-full flex xl:justify-start justify-center">
             <h1 className="font-bold text-center xl:text-start text-5xl xl:text-7xl md:text-6xl max-w-3xl mx-auto">

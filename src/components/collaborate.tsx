@@ -13,7 +13,7 @@ const Collaborate = () => {
         </h1>
         <p className="text-xl">
           Unlock the potential of your wonderfull idea with the right execution!
-          ,let your idea come into life and amaze everyone. Ready take your idea
+          ,let your idea come into life and amaze everyone. Ready? to take your idea
           to the world!!
         </p>
       </div>

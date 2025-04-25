@@ -58,7 +58,7 @@ const Tools = () => {
 
   return (
     <>
-      <div className="w-full xl:w-7/12 bg-red-300 p-0 md:p-2">
+      <div className="w-min bg-red-300 p-0 md:p-2">
         <div className="w-full flex flex-col gap-y-8 bg-green-400 xl:items-start items-center">
           <div className="w-full flex justify-center xl:justify-start bg-red-500">
             <h1 className="max-w-3xl text-5xl md:text-6xl font-bold text-center xl:text-start bg-red-600">

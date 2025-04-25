@@ -45,7 +45,7 @@ const About = () => {
 
   return (
     <>
-      <div className="bg-amber-700 w-full xl:w-7/12 p-2">
+      <div className="bg-amber-700 w-full xl:w-5/12 p-2">
         <ToastContainer />
         <div className="w-full flex bg-purple-400 flex-col gap-y-4">
           <div className="bg-green-200">
@@ -89,7 +89,7 @@ const About = () => {
                 These books have helped me level up mentally and gain valuable
                 insights. My ambition is to create something that will
                 positively impact the world. Becoming a full-stack developer is
-                my first and most important step on that path. Want to see if
+                my first and an important step on that path. Want to see if
                 I’m capable of working with you? Let’s catch up on a call!
               </p>
             </div>

@@ -1,0 +1,27 @@
+:root {
+    --gap: 2rem;
+  }
+  
+  .outer-slider {
+    background-color: azure;
+    overflow: hidden;
+  }
+  
+  .inner-slider {
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--gap);
+    animation: slide 60s linear infinite;
+  }
+  
+  @keyframes slide {
+    0%{
+        transform: translateX(90%);
+    }
+    50%{
+      transform: translateX(calc(-90% - var(--gap)));
+    }100%{
+        transform: translateX(90%);
+    }
+  }
+  

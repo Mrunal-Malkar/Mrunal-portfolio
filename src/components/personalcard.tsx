@@ -2,9 +2,10 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
+
 const PersonalCard = () => {
   return (
-    <div className="p-8 bg-[#272829] xl:w-[344px] min-w-full sm:min-w-[280px] rounded-xl w-full flex justify-center items-start xl:sticky xl:top-20">
+    <div className={`p-8 bg-[#272829] xl:w-[344px] min-w-full sm:min-w-[280px] rounded-xl w-full flex justify-center items-start xl:sticky z-20 xl:top-20`}>
       <div className="flex flex-col gap-y-8 justify-between h-full w-full">
         <div className="w-full gap-y-4">
           <div className="flex justify-center w-full overflow-hidden align-middle px-2">

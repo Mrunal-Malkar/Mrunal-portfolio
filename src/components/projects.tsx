@@ -34,13 +34,16 @@ const ProjectComponent = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col bg-purple-400 gap-y-4">
+      <div className="w-full flex flex-col gap-y-4">
         <div className="w-full flex xl:justify-start justify-center">
-          <h1 className="font-bold text-4xl bg-gray-500 md:text-5xl xl:text-6xl md:max-w-xl xl:max-w-xl text-center xl:text-start">
-            Frequently Asked Questions
+          <h1 className="font-medium text-4xl md:text-5xl xl:text-6xl md:max-w-xl xl:max-w-xl text-center xl:text-start tracking-widest">
+            Frequently Asked 
+            <span className="m-1 text-[#914BF1]">
+            Questions
+            </span>
           </h1>
         </div>
-        <div className="w-full p-2 bg-slate-400 flex flex-col xl:justify-start items-center justify-center">
+        <div className="w-full p-2 flex flex-col xl:justify-start items-center justify-center">
           {questionAndAnswer.map((val, i) => {
             return <Faq key={i} question={val.question} answer={val.answer} />;
           })}

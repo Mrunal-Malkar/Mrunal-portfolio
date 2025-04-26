@@ -8,7 +8,7 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <>
-      <span className="block xl:hidden">
+      <span className="block xl:hidden min-h-[full]">
         <PersonalCard />
       </span>
       <div className="w-full xl:w-5/12 h-screen p-2 text-gray-100">
@@ -156,7 +156,7 @@ const Home = () => {
                   </ul>
                 </div>
               </div>
-              <div></div>
+              {/* <div></div> */}
             </div>
           </div>
           <ProjectComponent />

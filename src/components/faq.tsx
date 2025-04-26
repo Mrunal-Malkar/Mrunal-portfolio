@@ -1,4 +1,6 @@
-import {useState} from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 interface faqInterface {
   question: string;
@@ -9,18 +11,36 @@ const Faq = ({ question, answer }: faqInterface) => {
   const [showAnswer, setShowAnswer] = useState(false);
 
   return (
-    <div className="w-full md:w-4/6 xl:w-full flex-col my-2 bg-green-200">
-      <div className="w-full flex items-center justify-between">
+    <div className="w-full my-3 md:w-4/6 xl:w-full flex-col overflow-hidden">
+      <div
+        className={`w-full p-5 flex items-center justify-between bg-[#2C2D2F] ${
+          showAnswer ? "rounded-t-xl" : "rounded-xl"
+        }`}
+      >
         <h1 className="text-xl font-semibold">{question}</h1>
-        <button className="p-1 px-2 bg-amber-200" onClick={() => setShowAnswer((val)=>!val)}>
-          {showAnswer ? "close" : "open"}
+        <button
+          className="p-1 px-2 text-xl"
+          onClick={() => setShowAnswer((val) => !val)}
+        >
+          {showAnswer ? <IoIosArrowDown /> : <IoIosArrowUp />}
         </button>
       </div>
-      {showAnswer && (
-        <div className="w-full flex justify-start bg-amber-700">
-          <h1 className="text-lg font-medium text-start">{answer}</h1>
-        </div>
-      )}
+
+      <AnimatePresence>
+        {showAnswer && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden w-full flex justify-start"
+          >
+            <div className="bg-[#2C2D2F] p-4 rounded-b-xl w-full">
+              <h1 className="text-lg text-gray-300 text-start">{answer}</h1>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

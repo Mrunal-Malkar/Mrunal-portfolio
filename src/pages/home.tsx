@@ -29,7 +29,7 @@ const Home = () => {
             </div>
           </div>
           <div className="w-full flex flex-col sm:items-center xl:items-start align-middle gap-y-8">
-            <div className="flex self-center xl:self-start sm:flex-row flex-col w-4/6 justify-around">
+            <div className="flex self-center xl:self-start sm:flex-row gap-x-4 flex-col w-4/6 justify-around">
               <div className="flex flex-col  xl:items-start items-center">
                 <h1 className="text-7xl font-bold text-white">+20</h1>
                 <div className="flex flex-col text-gray-300 text-lg font-mono tracking-tighter items-center w-full">

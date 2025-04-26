@@ -1,109 +1,91 @@
-export const AllProject = [
+interface ProjectType {
+  name: string;
+  github: string;
+  about: string;
+  image: string;
+  livelink: string;
+}
+
+export const AllProject: ProjectType[] = [
   {
-    name1: "ChAtTeR",
-    github1: "https://github.com/Mrunal-Malkar/chatter--Mern-stack-chat-app",
-    about1: "Real time chat application",
-    image1: "projectimage/chatterimage.png",
-    livelink1: "https://chatter-mern-stack-chat-app.vercel.app/",
-    name2: "Musical",
-    about2: "Listen according to listeners!",
-    github2: "https://github.com/Mrunal-Malkar/Musical",
-    image2: "musicalimage",
-    livelink2: "https://musical-eosin.vercel.app/",
+    name: "ChAtTeR",
+    github: "https://github.com/Mrunal-Malkar/chatter--Mern-stack-chat-app",
+    about: "Real time chat application",
+    image: "projectimage/chatterimage.png",
+    livelink: "https://chatter-mern-stack-chat-app.vercel.app/",
   },
   {
-    name1: "amazon-clone",
-    github1: "https://github.com/Mrunal-Malkar/Amazon-clone-using-Html-CSS",
-    about1: "Built stunning Amazon clone using HTML and CSS only!",
-    image1: "amazon-css.jpg",
-    livelink1: "https://mrunal-malkar.github.io/Amazon-clone-using-Html-CSS/",
-    name2: "BookStore website",
-    about2: "Built using MERN stack, deployed on vercel and railway",
-    github2: "https://github.com/Mrunal-Malkar/Bookstore-website-MERN-stack",
-    image2: "BookStore.png",
-    livelink2: "https://bookstore-website-mern-stack.vercel.app/",
+    name: "Musical",
+    github: "https://github.com/Mrunal-Malkar/Musical",
+    about: "Listen according to listeners!",
+    image: "projectimage/musicalimage",
+    livelink: "https://musical-eosin.vercel.app/",
   },
   {
-    name1: "Contact-app",
-    github1: "https://github.com/Mrunal-Malkar/Contact-app-using-firebase-and-react",
-    about1: "This is the contact app made using react and firebase.",
-    image1: "contact-app-firebase.png",
-    livelink1: "",
-    name2: "Font-Awesome",
-    about2: "font awesome website clone using bootstrap and css",
-    github2: "https://github.com/Mrunal-Malkar/Font-awesome-website-clone-using-bootstrap-CSS",
-    image2: "fontawesomeclone.jpg",
-    livelink2: "",
+    name: "Amazon Clone",
+    github: "https://github.com/Mrunal-Malkar/Amazon-clone-using-Html-CSS",
+    about: "Built stunning Amazon clone using HTML and CSS only!",
+    image: "projectimage/amazon-css.jpg",
+    livelink: "https://mrunal-malkar.github.io/Amazon-clone-using-Html-CSS/",
   },
   {
-    name1: "Rock-paper-scissors",
-    github1: "https://github.com/Mrunal-Malkar/Rock-Paper-Scissor-game-using-Javascript-js-",
-    about1: "Rock paper scissors game using vanilla css and javascript!",
-    image1: "rockpaperscissorgame.jpg",
-    livelink1: "https://mrunal-malkar.github.io/Rock-Paper-Scissor-game-using-Javascript-js-/",
-    name2: "Todo List App",
-    about2: "this is where you store your todos! built using react with super clean UI.",
-    github2: "https://github.com/Mrunal-Malkar/To-Do-List-with-React",
-    image2: "todolist.jpg",
-    livelink2: "",
+    name: "BookStore Website",
+    github: "https://github.com/Mrunal-Malkar/Bookstore-website-MERN-stack",
+    about: "Built using MERN stack, deployed on Vercel and Railway",
+    image: "projectimage/BookStore.png",
+    livelink: "https://bookstore-website-mern-stack.vercel.app/",
+  },
+  {
+    name: "Contact App",
+    github: "https://github.com/Mrunal-Malkar/Contact-app-using-firebase-and-react",
+    about: "Contact app made using React and Firebase.",
+    image: "projectimage/contact-app-firebase.png",
+    livelink: "",
+  },
+  {
+    name: "Font-Awesome Clone",
+    github: "https://github.com/Mrunal-Malkar/Font-awesome-website-clone-using-bootstrap-CSS",
+    about: "Font Awesome website clone using Bootstrap and CSS",
+    image: "projectimage/fontawesomeclone.jpg",
+    livelink: "",
+  },
+  {
+    name: "Rock Paper Scissors",
+    github: "https://github.com/Mrunal-Malkar/Rock-Paper-Scissor-game-using-Javascript-js-",
+    about: "Rock paper scissors game using Vanilla CSS and JavaScript!",
+    image: "projectimage/rockpaperscissorgame.jpg",
+    livelink: "https://mrunal-malkar.github.io/Rock-Paper-Scissor-game-using-Javascript-js-/",
+  },
+  {
+    name: "Todo List App",
+    github: "https://github.com/Mrunal-Malkar/To-Do-List-with-React",
+    about: "Where you store your todos! Built with React and clean UI.",
+    image: "projectimage/todolist.jpg",
+    livelink: "",
   },
 ];
 
-//ADD ONE PROJECT BOILERPLATE
 
-//{ name1: "",
-// github1: "",
-// about1: "",
-// image1: "",
-// livelink1: ""},
-
-
-//ADD TWO PROJECTS BOILERPLATE
-
-// {
-//   name1: "",
-//   github1: "",
-//   about1: "",
-//   image1: "",
-//   livelink1: "",
-//   name2: "",
-//   about2: "",
-//   github2: "",
-//   image2: "",
-//   livelink2: "",
-// },
-
-const topProjects:latestype[] = [];
-function latest3Project() {
-  for (const val of AllProject) {
-    if (topProjects.length >= 3) break;
-    
-    if (val.name1 && val.github1 && val.about1 && val.name2 && val.about2 && val.github2) {
-      topProjects.push(val);
-    } else if (val.name1 && val.github1 && val.about1) {
-      topProjects.push({
-        name1: val.name1,
-        github1: val.github1,
-        about1: val.about1,
-        image1: val.image1,
-        livelink1: val.livelink1,
-      });
-    }
-  }
-  return topProjects;
-};
-
-interface latestype{
-  name1?: string;
-  github1?: string;
-  about1?: string;
-  image1?: string;
-  livelink1?: string;
-  name2?:string;
-  github2?:string;
-  about2?:string;
-  image2?:string;
-  livelink2?:string;
-}
-
-export const LatestWorkedProject:latestype[] = latest3Project();
+export const LatestWorkedProject: ProjectType[] = [
+  {
+    name: "ChAtTeR",
+    github: "https://github.com/Mrunal-Malkar/chatter--Mern-stack-chat-app",
+    about: "Real time chat application",
+    image: "projectimage/chatterimage.png",
+    livelink: "https://chatter-mern-stack-chat-app.vercel.app/",
+  },
+  {
+    name: "Musical",
+    github: "https://github.com/Mrunal-Malkar/Musical",
+    about: "Listen according to listeners!",
+    image: "projectimage/musicalimage.png",
+    livelink: "https://musical-eosin.vercel.app/",
+  },
+  {
+    name: "amazon-clone",
+    github: "https://github.com/Mrunal-Malkar/Amazon-clone-using-Html-CSS",
+    about: "Built stunning Amazon clone using HTML and CSS only!",
+    image: "projectimage/amazon-css.jpg",
+    livelink: "https://mrunal-malkar.github.io/Amazon-clone-using-Html-CSS/",
+  },
+];

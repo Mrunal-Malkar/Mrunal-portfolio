@@ -2,4 +2,5 @@
 
 :root{
     background-color: rgb(17, 18, 19);
+    transition: all 1s linear;
 }

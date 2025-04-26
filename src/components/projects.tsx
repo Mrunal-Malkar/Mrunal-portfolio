@@ -16,7 +16,7 @@ const ProjectComponent = () => {
             Recent Projects and Achievements
           </h1>
         </div>
-        <div className="min-w-full grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 p-1 sm:p-4 ">
+        <div className="min-w-full grid grid-cols-1 sm:grid-cols-2 gap-2 gap-y-6 sm:gap-4 p-1 sm:p-4 ">
           {LatestWorkedProject.map((val, i) => {
             return <ProjectCard key={i} val={val} />;
           })}

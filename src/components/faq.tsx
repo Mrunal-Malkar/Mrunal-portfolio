@@ -11,7 +11,12 @@ const Faq = ({ question, answer }: faqInterface) => {
   const [showAnswer, setShowAnswer] = useState(false);
 
   return (
-    <div className="w-full my-3 md:w-4/6 xl:w-full flex-col overflow-hidden">
+    <motion.div
+    initial={{opacity:0,x:0,y:50}}
+    whileInView={{opacity:100,x:0,y:0}}
+    viewport={{ once: true, amount: 0.5 }}
+    transition={{duration:0.5}}
+    className="w-full my-3 md:w-4/6 xl:w-full flex-col overflow-hidden">
       <div
         className={`w-full p-5 flex items-center justify-between bg-[#2C2D2F] ${
           showAnswer ? "rounded-t-xl" : "rounded-xl"
@@ -41,7 +46,7 @@ const Faq = ({ question, answer }: faqInterface) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 

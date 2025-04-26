@@ -1,8 +1,8 @@
 import PersonalCard from "../components/personalcard";
-import "./../../public/home.css";
+import "./../../public/home.css"
 import ProjectComponent from "../components/projects";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { Navigate, NavLink, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -69,14 +69,14 @@ const Home = () => {
                   <ul className="flex overflow-hidden inner-slider font-semibold text-gray-300">
                     <li className="flex flex-col justify-center slider items-center">
                       <div className="sm:w-36 w-28 h-28 sm:h-36 p-2 ">
-                        <img src="react.png" className="w-full h-full" alt="" />
+                        <img src="toolsimage/react.png" className="w-full h-full" alt="" />
                       </div>
-                      <p>React.js</p>
+                      <p>React.js</p> 
                     </li>
                     <li className="flex flex-col justify-center slider items-center">
                       <div className="sm:w-36 w-28 h-28 sm:h-36 p-2 ">
                         <img
-                          src="nextjs.png"
+                          src="toolsimage/nextjs.png"
                           className="bg-gray-600 rounded-3xl w-full h-full"
                           alt=""
                         />
@@ -86,7 +86,7 @@ const Home = () => {
                     <li className="flex flex-col justify-center slider items-center">
                       <div className="sm:w-36 w-28 h-28 sm:h-36 p-2 ">
                         <img
-                          src="mongodb.png"
+                          src="toolsimage/mongodb.png"
                           className="w-full h-full"
                           alt=""
                         />
@@ -96,7 +96,7 @@ const Home = () => {
                     <li className="flex flex-col justify-center slider items-center">
                       <div className="sm:w-36 w-28 h-28 sm:h-36 p-2 ">
                         <img
-                          src="express.png"
+                          src="toolsimage/express.png"
                           className="w-full h-full"
                           alt=""
                         />
@@ -105,14 +105,14 @@ const Home = () => {
                     </li>
                     <li className="flex flex-col justify-center slider items-center">
                       <div className="sm:w-36 w-28 h-28 sm:h-36 p-2 ">
-                        <img src="node.png" className="w-full h-full" alt="" />
+                        <img src="toolsimage/node.png" className="w-full h-full" alt="" />
                       </div>
                       <p>Node.js</p>
                     </li>
                     <li className="flex flex-col justify-center slider items-center">
                       <div className="sm:w-36 w-28 h-28 sm:h-36 p-2 ">
                         <img
-                          src="github.png"
+                          src="toolsimage/github.png"
                           className="w-full h-full"
                           alt=""
                         />
@@ -122,7 +122,7 @@ const Home = () => {
                     <li className="flex flex-col justify-center slider items-center">
                       <div className="sm:w-36 w-28 h-28 sm:h-36 p-2 ">
                         <img
-                          src="tailwind.png"
+                          src="toolsimage/tailwind.png"
                           className="w-full h-full"
                           alt=""
                         />
@@ -131,14 +131,14 @@ const Home = () => {
                     </li>
                     <li className="flex flex-col justify-center slider items-center">
                       <div className="sm:w-36 w-28 h-28 sm:h-36 p-2 ">
-                        <img src="redux.png" className="w-full h-full" alt="" />
+                        <img src="toolsimage/redux.png" className="w-full h-full" alt="" />
                       </div>
                       <p>Redux</p>
                     </li>
                     <li className="flex flex-col justify-center slider items-center">
                       <div className="sm:w-36 w-28 h-28 sm:h-36 p-2 ">
                         <img
-                          src="postman.svg"
+                          src="toolsimage/postman.svg"
                           className="w-full h-full"
                           alt=""
                         />

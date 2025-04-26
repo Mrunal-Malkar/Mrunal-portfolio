@@ -73,8 +73,8 @@ export const AllProject = [
 //   livelink2: "",
 // },
 
+const topProjects:latestype[] = [];
 function latest3Project() {
-  const topProjects = [];
   for (const val of AllProject) {
     if (topProjects.length >= 3) break;
     
@@ -91,6 +91,19 @@ function latest3Project() {
     }
   }
   return topProjects;
+};
+
+interface latestype{
+  name1?: string;
+  github1?: string;
+  about1?: string;
+  image1?: string;
+  livelink1?: string;
+  name2?:string;
+  github2?:string;
+  about2?:string;
+  image2?:string;
+  livelink2?:string;
 }
 
-export const LatestWorkedProject = latest3Project();
+export const LatestWorkedProject:latestype[] = latest3Project();

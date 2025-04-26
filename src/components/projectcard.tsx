@@ -15,7 +15,7 @@ const ProjectCard = ({ val }: { val: projectType }) => {
     <motion.div 
     initial={{opacity:0,x:0,y:200}}
     whileInView={{opacity:100,x:0,y:0}}
-    viewport={{ once: true, amount: 0.5 }}
+    viewport={{ once: true, amount: 0.2 }}
     transition={{duration:1}}
     className="flex sm:flex-row flex-col w-full align-middle items-center sm:justify-center self-center gap-4">
       <div className="w-full max-w-[365px] bg-[#2C2D2F] overflow-auto h-[303px] rounded-3xl">

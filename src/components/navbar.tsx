@@ -14,7 +14,7 @@ const getNavClassName: NavLinkProps['className'] = ({ isActive }) =>
 
 const Navbar = () => {
   return (
-    <div className="w-full pb-24 py-14 flex justify-center items-center h-32">
+    <div className="w-full sm:pb-24 sm:py-14 flex justify-center items-center h-32">
       <nav className="h-12 bg-[#242424] rounded-lg text-white p-2 gap-x-6 flex justify-center items-center">
 
         <NavLink to="/" className={getNavClassName}>

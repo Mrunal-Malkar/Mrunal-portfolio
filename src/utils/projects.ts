@@ -18,7 +18,7 @@ export const AllProject: ProjectType[] = [
     name: "Musical",
     github: "https://github.com/Mrunal-Malkar/Musical",
     about: "Listen according to listeners!",
-    image: "projectimage/musicalimage",
+    image: "projectimage/musicalimage.png",
     livelink: "https://musical-eosin.vercel.app/",
   },
   {

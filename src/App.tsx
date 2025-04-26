@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="flex w-full justify-center pt-10 flex-col xl:flex-row xl:gap-y-0 gap-y-8 gap-x-8 p-4 md:p-2 xl:p-0">
+      <div className="flex w-full justify-center sm:pt-10 flex-col xl:flex-row xl:gap-y-0 gap-y-8 gap-x-8 sm:p-4 md:p-2 xl:p-0">
         <span className="xl:block hidden">
           <PersonalCard />
         </span>

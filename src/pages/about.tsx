@@ -56,7 +56,10 @@ const About = () => {
         <div className="w-full flex flex-col gap-y-4">
           <div className="text-white">
             <h1 className="text-5xl  xl:text-start text-center md:text-7xl font-bold">
-              More about me
+              More about 
+              <span className="text-[#914BF1] m-1 mx-2">
+              me
+              </span>
             </h1>
           </div>
           <div className="w-full overflow-hidden">

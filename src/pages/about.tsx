@@ -3,6 +3,7 @@ import PersonalCard from "../components/personalcard";
 import { toast, ToastContainer } from "react-toastify";
 import emailjs from "emailjs-com";
 import Collaborate from "../components/collaborate";
+import { motion } from "motion/react";
 
 const About = () => {
   const [email, setEmail] = useState("");
@@ -45,16 +46,21 @@ const About = () => {
 
   return (
     <>
-      <div className="bg-amber-700 w-full xl:w-5/12 p-2">
+      <motion.div
+            initial={{ opacity: 0, x: 0, y:-200 }}
+            whileInView={{ opacity: 100, x: 0, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+      className=" w-full xl:w-5/12 p-2 xl:block flex flex-col items-center">
         <ToastContainer />
-        <div className="w-full flex bg-purple-400 flex-col gap-y-4">
-          <div className="bg-green-200">
+        <div className="w-full flex flex-col gap-y-4">
+          <div className="text-white">
             <h1 className="text-5xl  xl:text-start text-center md:text-7xl font-bold">
               More about me
             </h1>
           </div>
-          <div className="w-full bg-green-600">
-            <div className="w-full text-2xl bg-green-200 p-4">
+          <div className="w-full overflow-hidden">
+            <div className="w-full tracking-wide font-semisolid bg-[#272829] text-gray-300 rounded-2xl text-2xl xl:p-6 p-12">
               <p className="mb-4">
                 I'm a 17-year-old passionate developer with over 8 months of
                 self-driven learning fueled by curiosity. Along this journey,
@@ -67,7 +73,7 @@ const About = () => {
                 I'm also an avid reader, and some of the books that have shaped
                 my mindset include:
               </p>
-              <ul className="list-disc list-inside text-lg mb-4">
+              <ul className="list-disc list-inside text-lg mb-4 font-medium flex flex-col gap-y-4">
                 <li>
                   <strong>Atomic Habits</strong> – James Clear
                 </li>
@@ -89,43 +95,50 @@ const About = () => {
                 These books have helped me level up mentally and gain valuable
                 insights. My ambition is to create something that will
                 positively impact the world. Becoming a full-stack developer is
-                my first and an important step on that path. Want to see if
-                I’m capable of working with you? Let’s catch up on a call!
+                my first and an important step on that path. Want to see if I’m
+                capable of working with you? Let’s catch up on a call!
               </p>
             </div>
-            <div className="flex flex-col xl:items-start items-center bg-blue-300 p-4">
-              <h1 className="text-2xl mb-2">Reach me:</h1>
-              <span className="text-lg mb-2">Send an email</span>
-              <div className="flex w-full items-center justify-between sm:w-[560px] xl:w-full">
-                <p className="w-16 bg-amber-200">Email:</p>
+            <motion.div
+            initial={{ opacity: 0, x: 0, y:-200 }}
+            whileInView={{ opacity: 100, x: 0, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="flex flex-col xl:items-start items-center my-6 bg-[#272829] rounded-2xl overflow-hidden p-4">
+              <h1 className="text-2xl font-bold text-white sm:text-3xl m-2">Reach me:</h1>
+              <span className="text-lg mb-2 font-semibold text-white sm:text-2xl">Send an email</span>
+              <div className="flex w-full border-t-2 border-t-slate-300 items-center p-4 justify-between rounded-xl overflow-hidden sm:w-[560px] xl:w-full">
+                <p className="w-16 font-semibold h-full text-gray-100">Email:</p>
                 <input
                   onChange={(e) => setEmail(e.target.value)}
                   type="text"
                   value={email}
                   placeholder="enter your email"
-                  className="p-2 mb-2 border sm:w-[550px] w-full xl:w-full bg-red-400 border-gray-400 rounded "
+                  className="p-3 mb-2 border sm:w-[550px] h-full bg-slate-800 outline-0 font-medium text-white w-full xl:w-full border-gray-300 rounded-lg "
                 />
               </div>
-              <div className="flex w-full items-center justify-between sm:w-[560px] xl:w-full">
-                <p className="bg-amber-300 w-18">Message:</p>
+              <div className="flex flex-col w-full border-b-2 border-y-slate-300 rounded-xl p-4 items-center justify-between sm:w-[560px] xl:w-full">
+                <div className="flex p-4 items-center justify-between w-full">
+                <p className="text-gray-100 me-2 w-18">Message:</p>
                 <textarea
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
                   placeholder="Enter your message"
-                  className="p-2 mb-2 xl:w-full sm:w-[550px] w-full border border-gray-400 rounded "
+                  className="p-3 mb-2 xl:w-full sm:w-[550px] w-full border outline-0 text-white font-medium rounded-lg border-gray-300 bg-slate-800"
                 ></textarea>
-              </div>
+                </div>
               <button
                 onClick={sendEmail}
-                className="bg-red-400 p-2 rounded text-white hover:bg-red-500"
+                className="p-2 px-4 w-full font-semibold tracking-wider ronded-lg overflow-hidden m-3 rounded-lg text-black bg-gray-400 hover:bg-gray-600"
               >
                 Send
               </button>
-            </div>
+              </div>
+            </motion.div>
           </div>
         </div>
-      <Collaborate/>
-      </div>
+        <Collaborate />
+      </motion.div>
       <span className="block xl:hidden">
         <PersonalCard />
       </span>

@@ -1,12 +1,15 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router";
 
 const Collaborate = () => {
+  const navigate=useNavigate();
   return (
     <motion.div 
     initial={{opacity:0,x:0,y:200}}
     whileInView={{opacity:100,x:0,y:0}}
-    transition={{duration:1}}
+    viewport={{ once: true, amount: 0.3}}    
+    transition={{duration:0.8}}
     className="w-full max-w-[780px] overflow-hidden">
       <div className="w-full bg-[#2C2D2F] flex flex-col gap-y-2 my-8 rounded-2xl p-6">
         <div className="flex justify-between align-middle items-center">
@@ -17,6 +20,12 @@ const Collaborate = () => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 1 }}
             className="h-[50px] w-[50px] rounded-3xl flex justify-center items-center bg-purple-500"
+            onClick={() => {
+              navigate("/about");
+              setTimeout(() => {
+                window.scrollTo(0, 0);
+              }, 100);
+            }}
           >
             <FaArrowRightLong className="text-2xl text-white" />
           </motion.button>

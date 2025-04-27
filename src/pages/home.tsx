@@ -8,7 +8,7 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <>
-      <span className="block xl:hidden min-h-[full]">
+      <span className="block xl:hidden min-h-[full] p-2">
         <PersonalCard />
       </span>
       <div className="w-full xl:w-5/12 h-screen p-2 text-gray-100">

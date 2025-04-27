@@ -32,29 +32,23 @@ const Tools = () => {
               Top Tier Tools For Exceptional Results
             </h1>
           </div>
-          <div className="w-full bg-blue-800">
+          <div className="w-full">
             <div className="flex w-full flex-col gap-y-8">
-              <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-2 sm:gap-1 sm:gap-x-14 xl:gap-x-4 sm:gap-y-6 gap-y-2 bg-green-400">
-              {tools.map((val) => {
-                return (
-                    // <div className="w-full flex min-h-[150px] justify-start gap-x-1 md:w-[236px] xl:max-w-[318px] bg-blue-500">
-                    //   <div className="w-[60px] h-[60px] bg-yellow-300">a</div>
-                    //   <div className="justify-between h-full flex flex-col bg-orange-400">
-                    //     <h1 className="">{val.tool1}</h1>
-                    //     <p>{val.about1}</p>
-                    //   </div>
-                    // </div>
-                    <div className="bg-blue-500 max-w-[280px] flex justify-between items-center min-h-[116px]">
-                      <div className="min-w-[100px] h-[100px]  p-4 bg-red-400">
-
+              <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-2 sm:gap-1 sm:gap-x-14 xl:gap-x-4 sm:gap-y-6 gap-y-2">
+                {tools.map((val) => {
+                  return (
+                    <div className="bg-[#272829] max-w-[280px] flex justify-between rounded-xl items-center min-h-[116px]">
+                      <div className="min-w-[100px] max-w-[100px] h-[100px] bg-gray-300 rounded-2xl  p-4">
+                          <img src={val.image} className="w-full h-full" alt="toll image" />
                       </div>
-                      <div className="w-full bg-green-100 h-full p-6">
-
+                      <div className="w-full h-[100px] p-1 overflow-auto flex flex-col justify-between items-start">
+                        <h1 className="text-2xl font-bold">{val.tool}</h1>
+                        <p className="text-md font-semibold">{val.about}</p>
                       </div>
                     </div>
                   );
                 })}
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -69,7 +63,7 @@ const Tools = () => {
           })}
         </div>
         <div className="w-full flex xl:justify-start justify-center">
-        <Collaborate />
+          <Collaborate />
         </div>
       </div>
       <span className="block xl:hidden">

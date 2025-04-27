@@ -16,4 +16,6 @@ export const tools = [
     image: "toolsimage/vercel.svg",
   },
   { tool: "Redux", about: "State management library for React", image: "toolsimage/redux.png" },
+  { tool: "Postman", about: "Api testing", image: "toolsimage/postman.svg" },
+  { tool: "Motion", about: "implementing animation", image: "toolsimage/motion.png" },
 ];

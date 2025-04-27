@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import type { NavLinkProps } from 'react-router-dom';
 import { FiHome } from "react-icons/fi";

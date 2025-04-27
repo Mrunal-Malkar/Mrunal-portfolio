@@ -53,12 +53,16 @@ const Home = () => {
               </div>
             </div>
             <div className="w-full flex justify-center font-semibold text-md xl:justify-start gap-x-4">
-              <button className="px-12 py-3 rounded-lg bg-purple-500">
+              <button 
+              onClick={()=>navigate("/about")}
+              className="px-12 py-3 rounded-lg bg-purple-500">
                 Let's Talk!
               </button>
-              <div className="px-3 py-3 flex justify-center items-center gap-1 hover:gap-2">
+              <button 
+              onClick={()=>navigate("/project")}
+              className="px-3 py-3 flex justify-center items-center gap-1 hover:gap-2">
                 My work <FaArrowRightLong />
-              </div>
+              </button>
             </div>
             <div className="w-full flex justifiy-center">
               <div className="w-full flex flex-col items-center overflow-hidden align-middle gap-y-2">

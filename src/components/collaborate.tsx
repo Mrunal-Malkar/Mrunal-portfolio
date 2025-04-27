@@ -13,7 +13,7 @@ const Collaborate = () => {
     className="w-full max-w-[780px] overflow-hidden">
       <div className="w-full bg-[#2C2D2F] flex flex-col gap-y-2 my-8 rounded-2xl p-6">
         <div className="flex justify-between align-middle items-center">
-          <h1 className="text-4xl md:text-5xl font-semibold">Let's</h1>
+          <h1 className="text-4xl md:text-5xl font-semibold text-white">Let's</h1>
           <motion.button
             initial={{ rotate: -100, x: 0, y: 0 }}
             whileInView={{rotate:310,x:0,y:0,scale:1.25}}
@@ -30,7 +30,7 @@ const Collaborate = () => {
             <FaArrowRightLong className="text-2xl text-white" />
           </motion.button>
         </div>
-        <div className="flex flex-col gap-y-4">
+        <div className="text-white flex flex-col gap-y-4">
           <h1 className="text-4xl text-start md:text-5xl text-[#914BF1] font-semibold">
             Collaborate
           </h1>

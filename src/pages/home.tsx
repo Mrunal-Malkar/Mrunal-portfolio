@@ -3,6 +3,8 @@ import "./../../public/home.css"
 import ProjectComponent from "../components/projects";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router";
+import { SiExpress } from "react-icons/si";
+
 
 const Home = () => {
   const navigate = useNavigate();
@@ -81,7 +83,7 @@ const Home = () => {
                       <div className="sm:w-36 w-28 h-28 sm:h-36 p-2 ">
                         <img
                           src="toolsimage/nextjs.png"
-                          className="bg-gray-600 rounded-3xl w-full h-full"
+                          className="bg-white rounded-[50%] w-full h-full"
                           alt=""
                         />
                       </div>
@@ -99,10 +101,8 @@ const Home = () => {
                     </li>
                     <li className="flex flex-col justify-center slider items-center">
                       <div className="sm:w-36 w-28 h-28 sm:h-36 p-2 ">
-                        <img
-                          src="toolsimage/express.png"
+                        <SiExpress
                           className="w-full h-full"
-                          alt=""
                         />
                       </div>
                       <p>Express.js</p>

@@ -10,7 +10,7 @@
     display: flex;
     flex-shrink: 0;
     gap: var(--gap);
-    animation: slide 16s linear infinite;
+    animation: slide 60s linear infinite;
   }
   
   @keyframes slide {

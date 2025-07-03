@@ -40,7 +40,7 @@ If you want to run this project locally:
 
 1. **Clone the repository**
    ```bash
-   git clone [Insert GitHub Link]
+   git clone https://github.com/Mrunal-Malkar/Mrunal-portfolio
    cd portfolio
    ```
 

@@ -12,7 +12,7 @@ const Tools = () => {
       <div className="xl:w-5/12 text-white p-0 md:p-2">
         <div className="w-full flex flex-col gap-y-8 xl:items-start items-center">
           <motion.div
-            initial={{ opacity: 0, x: 0, y:-200 }}
+            initial={{ opacity: 0, x: 0, y: -200 }}
             whileInView={{ opacity: 100, x: 0, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -28,7 +28,8 @@ const Tools = () => {
               <div className="w-full place-items-center sm:place-items-start grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-2 sm:gap-1 sm:gap-x-14 xl:gap-x-4 sm:gap-y-6 gap-y-2">
                 {tools.map((val) => {
                   return (
-                    <motion.div 
+                    <motion.div
+                      key={val.tool}
                       initial={{ opacity: 0, x: 0, y: 150 }}
                       whileInView={{ opacity: 100, x: 0, y: 0 }}
                       transition={{ duration: 1 }}
@@ -65,6 +66,7 @@ const Tools = () => {
                 {Languages.map((val) => {
                   return (
                     <motion.div
+                    key={val.language}
                       initial={{ opacity: 0, x: 0, y: 150 }}
                       whileInView={{ opacity: 100, x: 0, y: 0 }}
                       transition={{ duration: 1.7 }}
@@ -96,7 +98,7 @@ const Tools = () => {
             </h1>
           </div>
           {faqs.map((val) => {
-            return <Faq question={val.question} answer={val.answer} />;
+            return <Faq key={val.question} question={val.question} answer={val.answer} />;
           })}
         </div>
         <div className="w-full flex xl:justify-start justify-center">

@@ -57,12 +57,12 @@ const Home = () => {
             <div className="w-full flex justify-center font-semibold text-md xl:justify-start gap-x-4">
               <button 
               onClick={()=>navigate("/about")}
-              className="px-12 py-3 rounded-lg bg-purple-500">
+              className="px-12 py-3 cursor-pointer rounded-lg bg-purple-500">
                 Let's Talk!
               </button>
               <button 
               onClick={()=>navigate("/project")}
-              className="px-3 py-3 flex justify-center items-center gap-1 hover:gap-2">
+              className="px-3 py-3 cursor-pointer flex justify-center items-center gap-1 hover:gap-2">
                 My work <FaArrowRightLong />
               </button>
             </div>

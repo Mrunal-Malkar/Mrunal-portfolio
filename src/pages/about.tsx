@@ -63,7 +63,7 @@ const About = () => {
             </h1>
           </div>
           <div className="w-full overflow-hidden">
-            <div className="w-full tracking-wide font-semisolid bg-[#272829] text-gray-300 rounded-2xl text-2xl xl:p-6 p-12">
+            <div className="w-full tracking-wide font-semisolid bg-[#272829] text-gray-300 rounded-2xl text-2xl xl:p-6 p-4">
               <p className="mb-4">
                 I'm a 17-year-old passionate developer with over 8 months of
                 self-driven learning fueled by curiosity. Along this journey,

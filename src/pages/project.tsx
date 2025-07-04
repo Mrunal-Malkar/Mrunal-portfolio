@@ -43,7 +43,7 @@ const Project = () => {
           </div>
           <div className="w-full text-white p-2 flex flex-col xl:justify-start items-center justify-center">
             {questionAndAnswer.map((val) => {
-              return <Faq question={val.question} answer={val.answer} />;
+              return <Faq key={val.question} question={val.question} answer={val.answer} />;
             })}
           </div>
         </div>

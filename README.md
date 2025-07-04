@@ -1,5 +1,7 @@
 # 🌟 Personal Portfolio
 
+![Screenshot (53)](https://github.com/user-attachments/assets/aee5ccc7-c677-48f0-b0f2-6900f13e9cc7)
+
 Hey there! 👋  
 Welcome to the source code of my personal portfolio, a place where I showcase everything I build, design, and dream about as a **Full Stack Developer**.
 

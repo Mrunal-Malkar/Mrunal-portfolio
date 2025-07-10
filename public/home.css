@@ -1,26 +1,35 @@
 :root {
-    --gap: 2rem;
+  --gap: 2rem;
+}
+
+.outer-slider {
+  overflow: hidden;
+}
+
+.inner-slider {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--gap);
+  animation: slide 60s linear infinite;
+}
+
+.landingpage {
+  background-image: url("yy.png");
+  background-position: right;
+  background-size: 1100px;
+  background-color: white;
+  background-repeat: no-repeat;
+}
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(90%);
   }
-  
-  .outer-slider {
-    overflow: hidden;
+  50% {
+    transform: translateX(calc(-90% - var(--gap)));
   }
-  
-  .inner-slider {
-    display: flex;
-    flex-shrink: 0;
-    gap: var(--gap);
-    animation: slide 60s linear infinite;
+  100% {
+    transform: translateX(90%);
   }
-  
-  @keyframes slide {
-    0%{
-        transform: translateX(90%);
-    }
-    50%{
-      transform: translateX(calc(-90% - var(--gap)));
-    }100%{
-        transform: translateX(90%);
-    }
-  }
-  
+}

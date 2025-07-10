@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PersonalCard from "../components/personalcard";
 import { toast, ToastContainer } from "react-toastify";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import Collaborate from "../components/collaborate";
 import { motion } from "motion/react";
 

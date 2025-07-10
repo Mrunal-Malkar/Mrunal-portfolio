@@ -2,7 +2,7 @@ import { FaArrowRight } from 'react-icons/fa6'
 
 const LandingPage = () => {
   return (
-        <div className="h-[95vh] bg-gray-200 flex sm:flex-row flex-col">
+        <div className="h-[95vh] bg-white flex sm:flex-row flex-col">
           <div className="flex flex-col items-center justify-center h-full gap-y-6 sm:w-1/2 w-full">
           <div></div>
             <div className="text-6xl font-bold flex justify-center items-center flex-col text-black">

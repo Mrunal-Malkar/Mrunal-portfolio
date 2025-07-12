@@ -16,7 +16,7 @@
 .landingpage {
   background-image: url("yy.png");
   background-position: right;
-  background-size:cover;
+  background-size:contain;
   background-color: white;
   background-repeat: no-repeat;
 }

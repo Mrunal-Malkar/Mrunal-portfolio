@@ -36,6 +36,7 @@ function a11yProps(index: number) {
 export default function PlanTabs() {
   const [value, setValue] = React.useState(0);
 
+  //@ts-expect-error MUI Tabs onChange event type mismatch with expected signature
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };

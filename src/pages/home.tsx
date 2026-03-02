@@ -4,6 +4,7 @@ import ProjectComponent from "../components/projects";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router";
 import { SiExpress } from "react-icons/si";
+import { shortAboutMe } from "../utils/aboutMe";
 
 
 const Home = () => {
@@ -24,23 +25,21 @@ const Home = () => {
             </div>
             <div className="w-full flex justify-center xl:justify-start xl:block">
               <div className="text-lg text-center text-[#D9D9D9] max-w-2xl xl:text-start font-semibold ">
-                I am a 17y/o full stack developer with approx 8 months of
-                self-learning experience, driven by the uncountable no. of
-                possibilities code brings into life!
+                {shortAboutMe}
               </div>
             </div>
           </div>
           <div className="w-full flex flex-col sm:items-center xl:items-start align-middle gap-y-8">
-            <div className="flex self-center xl:self-start sm:flex-row gap-x-4 flex-col w-4/6 justify-around">
+            {/* <div className="flex self-center xl:self-start sm:flex-row gap-x-4 flex-col w-4/6 justify-around">
               <div className="flex flex-col  xl:items-start items-center">
-                <h1 className="text-7xl font-bold text-white">+20</h1>
+                <h1 className="text-7xl font-bold text-white">+6</h1>
                 <div className="flex flex-col text-gray-300 text-lg font-mono tracking-tighter items-center w-full">
                   <p>Projects</p>
                   <p>Made!</p>
                 </div>
               </div>
               <div className="flex flex-col  xl:items-start items-center">
-                <h1 className="text-7xl font-bold text-white">+800</h1>
+                <h1 className="text-7xl font-bold text-white">+900</h1>
                 <div className="flex flex-col text-lg text-gray-300 font-mono tracking-tighter items-center w-full">
                   <p>Hours of</p>
                   <p>dedicated learning!</p>
@@ -53,7 +52,7 @@ const Home = () => {
                   <p>Learning!</p>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="w-full flex justify-center font-semibold text-md xl:justify-start gap-x-4">
               <button 
               onClick={()=>navigate("/about")}

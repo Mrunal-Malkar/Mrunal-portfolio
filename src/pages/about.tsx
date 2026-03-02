@@ -4,6 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import Collaborate from "../components/collaborate";
 import { motion } from "motion/react";
+import { LongAboutMe } from "../utils/aboutMe";
 
 const About = () => {
   const [email, setEmail] = useState("");
@@ -64,43 +65,7 @@ const About = () => {
           </div>
           <div className="w-full overflow-hidden">
             <div className="w-full tracking-wide font-semisolid bg-[#272829] text-gray-300 rounded-2xl text-2xl xl:p-6 p-4">
-              <p className="mb-4">
-                I'm a 17-year-old passionate developer with over 8 months of
-                self-driven learning fueled by curiosity. Along this journey,
-                I've built several high-quality projects. My curiosity led me to
-                explore fields like video editing, creative writing, 3D
-                animation using Blender, and even trying my hand at being a
-                faceless YouTuber. But nothing clicked like coding did.
-              </p>
-              <p className="mb-4">
-                I'm also an avid reader, and some of the books that have shaped
-                my mindset include:
-              </p>
-              <ul className="list-disc list-inside text-lg mb-4 font-medium flex flex-col gap-y-4">
-                <li>
-                  <strong>Atomic Habits</strong> – James Clear
-                </li>
-                <li>
-                  <strong>Think and Grow Rich</strong> – Napoleon Hill
-                </li>
-                <li>
-                  <strong>The Power of Your Subconscious Mind</strong> – Joseph
-                  Murphy
-                </li>
-                <li>
-                  <strong>Zero to One</strong> – Peter Thiel
-                </li>
-                <li>
-                  <strong>Rich Dad Poor Dad</strong> – Robert Kiyosaki
-                </li>
-              </ul>
-              <p className="mb-4">
-                These books have helped me level up mentally and gain valuable
-                insights. My ambition is to create something that will
-                positively impact the world. Becoming a full-stack developer is
-                my first and an important step on that path. Want to see if I’m
-                capable of working with you? Let’s catch up on a call!
-              </p>
+             {LongAboutMe}
             </div>
             <motion.div
             initial={{ opacity: 0, x: 0, y:-200 }}

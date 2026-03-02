@@ -1,0 +1,3 @@
+export const shortAboutMe="I am 18y/o full stack developer with over 1.5 year of coding experience, I like to code,I like to read books and I love to think and write."
+
+export const LongAboutMe=("I am 18y/o full stack developer with over 1.5 year of coding experience, I am currently learning web3 and passionate about business and entrepreneurship,I read books which excite me, mainly around the topics of self-development and freedom. My goal is to create as much +impact as I can with everything I do. I am currently looking for a internship or job opportunity and will love to leverage my skills.")

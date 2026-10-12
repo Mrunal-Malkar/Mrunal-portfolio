@@ -12,7 +12,7 @@ const PersonalCard = () => {
         <div className="w-full gap-y-4">
           <div className="flex justify-center w-full overflow-hidden align-middle px-2">
             <div className="w-fit h-fit sm:w-[280px] overflow-hidden rounded-xl sm:h-[270px] my-0.5">
-            <img src="/mrunalpic.png" className="sm:w-full w-fit h-fit sm:h-full" alt="" />
+            <img src="/me.png" className="sm:w-full w-fit h-fit sm:h-full" alt="" />
             </div>
           </div>
           <div className="flex justify-center w-full align-middle flex-col gap-y-2">
